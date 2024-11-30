@@ -3,7 +3,7 @@ pipeline {
   stages {
     stage('Front End') {
       agent {
-        docker { image 'node:20.18.1-alpine3.20' }
+        docker { image 'node' }
         
       }
       steps {
