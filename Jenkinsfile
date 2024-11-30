@@ -3,7 +3,7 @@ pipeline {
   stages {
     stage('Front End') {
       agent {
-        docker { image 'node:16-alpine' }
+        docker { image 'node' }
       }
       steps {
         sh 'node --version'
