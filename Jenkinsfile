@@ -1,14 +1,13 @@
 pipeline {
   agent none
   stages {
-    stage('front end') {
+    stage('Front End') {
       agent {
         docker { image 'node:16-alpine' }
       }
       steps {
         sh 'node --version'
-      }
-      steps {
+        sh 'npm install'
         sh 'npm run test'
       }
     }
